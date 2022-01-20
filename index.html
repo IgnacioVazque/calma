@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/sideBar.css">
+    <title>Bar la calma</title>
+</head>
+<body>
+    <!-- Menú lateral -->
+    <div class="sidebar" id="mySidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times; </a>
+        <a href="#">Cervezas</a>
+        <a href="#">Bebidas Mixtas</a>
+        <a href="#">Botellas</a>
+        <a href="#">Alimentos</a>
+        <a href="#">Bebidas Sin Alcohol</a>
+        <a href="#">Postres</a>
+    </div>
+ 
+    <div class="contenido-principal" id="main">
+
+        <div class="menu">
+        <!-- <button class="openbtn" onclick="openNav()">&#9776 | Bar la calma </button> -->
+            <div class="openbtn flex"><a onclick="openNav()"> &#9776 </a></div>
+            <div class="openbtn flex1"><a>LA CABAÑA BAR LA CALMA</a></div>
+        </div>    
+
+        <div class="cervezas" id="cervezas">
+            <h2>Cervezas</h2>
+            <p>Cerveza Corona, Victoria $75.00</p>
+            <p>Cerveza XX Lager, Ámbar $80</p>
+            <p>Cerveza Indio $70</p>
+            <p>Negra Modelo, Modelo especial $90</p>
+            <p>Bohemia obscura $40</p>
+        </div>
+        <div class="mixtas" id="mixtas">
+            <h2>Bebidas Mixtas</h2>
+            <p>mezcalitos</p>
+            <p>Mojitos</p>
+            <p>Piña colada</p>
+            <p>Margaritas</p>
+            <p>Gin & Tonic</p>
+            <p>Palomas</p>
+        </div>
+        <div class="botellas" id="botellas">
+            <h2>Botellas</h2>
+            <p>Vino Tinto Finca las Moras</p>
+            <p>Vino Tinto Trapiche Malbec</p>
+            <p>Vino Tinto Pata Negra</p>
+            <p>Vino Riunite, Rossi, 4 Soles</p>
+        </div>
+    </div>
+    <script src="assets/script.js"></script>
+    
+</body>
+</html>
