@@ -1,77 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&family=Outfit:wght@400;700&family=Roboto:wght@100&display=swap');
+
+:root {
+    --verdesini: hsl(179, 27%, 51%);
+    --rojini: hsl(356, 75%, 57%);
+    --amarillo: hsl(53, 72%, 50%);
+}
+
 * {
-    margin: 0px;
     padding: 0px;
-}
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden; /*Deshabilita el scroll horizontal*/
-    padding-top: 60px;
-    transition: 0.5s; /*Tiempo de transicion*/
+    box-sizing: border-box;
 }
 
-/* links del menu */
-.menu {
-    position: fixed;
-    top: 0;
-    width: 135%;
-    display: flex;
-    margin-left: -35px;
+body {
+    /* margin: 0;
+    padding: 0; */
+    font-family: "Josefin Sans";
+    margin: 0;
+    /* flex-direction: column; */
+    /* align-items: center; */
+
+    /* overflow-y: scroll;
+    overflow-x: hidden; */
 }
-.flex1 {
-    flex-grow: 3;
-}
-.sidebar a{
-    padding: 8px 8px 8px 32px;
+
+a {
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
 }
 
-/* cambie color al posicionar el cursor */
-.sidebar a:hover {
-    color: #f1f1f1;
-}
+/* ==================================================================================================================================================== */
+/* ==================================================================================================================================================== */
+/* sidebar */
 
-/* Posision y estilo del boton para cerrar el menu */
-.sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
+/* ==================================================================================================================================================== */
+/* Estilos para darle funcionalidad al menu */
 
-/* Boton para abrir el menu (ver la manera de extenderlo y anclarlo al inicio de la pantalla) */
-.openbtn {
-    font-size: 25px;
-    cursor: pointer;
+
+/* ==================================================================================================================================================== */
+/* ==================================================================================================================================================== */
+
+/* Estilo barra fija al inicio */
+.menu {
+    /* display: flex; */
     background-color: #111;
     color: white;
-    padding: 10px 15px 10px 35px;
-    border: none;
+    padding: 1.25rem;
+    width: 100%;
+    /* position: fixed; */
+    top: 0;
+}
+
+.menu a {
+    margin-right: 4rem;
+} 
+
+main {
+    margin-top: 4.5rem;
 }
 
 
-.openbtn:hover {
-    background-color: #444;
+/* Estilos productos */
+
+.contenido-principal {
+  font-size: 1.30rem;
+  /* margin-left: 280px; */
 }
 
-/* para empujar el contenido a la hora de abrir el menu */
-#main {
-    transition: margin-left .5s; /*si se quiere efecto de transición*/
-    padding: 20px;
+.producto {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
-/* Para pantallas pequeñas, en donde el ancho es menir a 450px, cabia el estilo del sidebar (menos padding y fuente mas pequeña) */
-@media screen and (max-height: 450px) {
-    .sidebar { padding-top: 15px; }
-    .sidebar a { font-size: 18px; }
+.producto h2{
+    color: var(--verdesini);
+    margin: 0.75rem;
 }
+
+.producto p{
+    margin: .5rem;
+}
+
+

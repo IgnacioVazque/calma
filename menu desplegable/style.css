@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&family=Outfit:wght@400;700&family=Roboto:wght@100&display=swap');
+
+:root {
+    --verdesini: hsl(179, 27%, 51%);
+    --rojini: hsl(356, 75%, 57%);
+    --amarillo: hsl(53, 72%, 50%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Josefin Sans";
+    margin: 0;
+    padding: 0;
+    
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Estilos del menu */
+.nav {
+    position: absolute;
+    width: 200px;
+    height: 100vh;
+    top: 0;
+    /* ocultamos el menu */
+    left: -220px; 
+    padding-top: 47px;
+    padding-top:47px;
+    background-color: rgba(29, 33, 32, 1);
+    border-right:4px solid var(--rojini);
+    /* desplazamiento suave */
+    transition: all .5s ease;
+}
+
+/* Estilos del li del menu */
+.nav__item {
+    display: block;
+    width: 96%;
+    margin: 0 auto;
+    line-height: 2;
+
+    /* Posision relativa para el triangulo que indica en donde esta */
+    position: relative;
+    border-bottom:.5px solid rgba(59, 62, 61, 1);
+    border-top:.5px solid rgba(59, 62, 61, 1);
+    background-color:transparent;
+    font-family: 'Lato', sans-serif;
+    text-align:center;
+    /* color:rgba(221, 231, 228, 1); */
+    color: var(--amarillo);
+}
+
+.current:before {
+    content:"";
+    width:0;
+    height:0;
+    position:absolute;
+    border-top:17px solid transparent;
+    border-left:15px solid #1D2120;
+    border-bottom:17px solid transparent;
+    top:0px;
+    right:-15px;
+    z-index:4;
+}
+
+.current:after {
+    content:"";
+    width:0;
+    height:0;
+    position:absolute;
+    border-top:16.5px solid transparent;
+    border-left:17px solid var(--rojini);
+    border-bottom:17px solid transparent;
+    top:.5px;
+    right:-21px;
+    z-index:1;
+}
+
+.menu-toogle {
+    position: absolute;
+    width: 35px;
+    line-height:1.1;
+    text-align:center;
+    top:6.5px;
+    left: 8px; 
+    border-radius:3px;
+    background-color: #fff;
+    transition: all .5s ease;
+    z-index:10;
+    margin-top: 1rem;
+}
+
+.menu-toogle::before {
+    content:"☰";
+    font-size:32px;
+    /* color:white; */
+}
+
+.main-w {
+    font-size: 1.20rem;
+    width:80%;
+    height:100vh;
+    transition: all .5s ease;
+}   
+  
+/*Estos son los estilos que le dan la funcionalidad al menú*/
+/*El checkbox según esté activado o no hará que el menú aparezca o desaparezca*/
+.checkbox {
+    display:none; /*Ocultamos el checkbox pues no nos interesa que se vea*/
+}
+
+.checkbox:checked ~ .nav {
+    left:0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
+    position:fixed; /* Fijamos el menú lateral para que se desplace cuando hagamos scroll*/
+}
+
+.checkbox:checked ~ .main-w {
+        margin-left:200px; /*Cuando el checkbox asigna un margen al contenedor principal para que se desplace junto con el menú*/
+}
+
+.checkbox:checked ~ .menu-toogle { 
+    left:208px;
+    position:fixed; /*Fijamos la hamburgues para que se desplace junto con el menú*/
+}
+  
+  
+/*
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+            CONTENIDO
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+
+.titulo {
+    margin-left: 8rem;
+    color: var(--rojini);
+}
+
+h2 {
+    color: var(--verdesini);
+}
+
+.producto {
+    margin-left: 3rem;
+}
+
+.prod {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item1{
+    /* background-color: aqua; */
+}
+
+.item2 {
+    width: 20%;
+    /* background-color: brown; */
+    align-self: flex-end;
+}
+
+

@@ -1,0 +1,81 @@
+Menu lateral CSS
+
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden; /*Deshabilita el scroll horizontal*/
+    padding-top: 60px;
+    transition: 0.5s; /*Tiempo de transicion*/
+}
+
+/* links del menu */
+.menu {
+    position: fixed;
+    top: 0;
+    width: 135%;
+    display: flex;
+    margin-left: -35px;
+}
+.flex1 {
+    flex-grow: 3;
+    text-align: justify;
+}
+.sidebar a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* cambie color al posicionar el cursor */
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+/* Posision y estilo del boton para cerrar el menu */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Boton para abrir el menu (ver la manera de extenderlo y anclarlo al inicio de la pantalla) */
+.openbtn {
+    font-size: 25px;
+    cursor: pointer;
+    background-color: #111;
+    color: var(--rojini);
+    padding: 10px 15px 10px 35px;
+    border: none;
+}
+
+.openbtn a{
+    color: white;
+}
+
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+/* para empujar el contenido a la hora de abrir el menu */
+#main {
+    transition: margin-left .5s; /*si se quiere efecto de transición */
+    padding: 20px;
+}
+
+/* Para pantallas pequeñas, en donde el ancho es menir a 450px, cabia el estilo del sidebar (menos padding y fuente mas pequeña) */
+@media screen and (max-height: 450px) {
+    .sidebar { padding-top: 15px; }
+    .sidebar a { font-size: 18px; }
+}

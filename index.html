@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,51 +8,93 @@
     <title>Bar la calma</title>
 </head>
 <body>
-    <!-- Menú lateral -->
-    <div class="sidebar" id="mySidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times; </a>
-        <a href="#">Cervezas</a>
-        <a href="#">Bebidas Mixtas</a>
-        <a href="#">Botellas</a>
-        <a href="#">Alimentos</a>
-        <a href="#">Bebidas Sin Alcohol</a>
-        <a href="#">Postres</a>
-    </div>
- 
-    <div class="contenido-principal" id="main">
-
-        <div class="menu">
-        <!-- <button class="openbtn" onclick="openNav()">&#9776 | Bar la calma </button> -->
-            <div class="openbtn flex"><a onclick="openNav()"> &#9776 </a></div>
-            <div class="openbtn flex1"><a>LA CABAÑA BAR LA CALMA</a></div>
-        </div>    
-
-        <div class="cervezas" id="cervezas">
-            <h2>Cervezas</h2>
-            <p>Cerveza Corona, Victoria $75.00</p>
-            <p>Cerveza XX Lager, Ámbar $80</p>
-            <p>Cerveza Indio $70</p>
-            <p>Negra Modelo, Modelo especial $90</p>
-            <p>Bohemia obscura $40</p>
-        </div>
-        <div class="mixtas" id="mixtas">
-            <h2>Bebidas Mixtas</h2>
-            <p>mezcalitos</p>
-            <p>Mojitos</p>
-            <p>Piña colada</p>
-            <p>Margaritas</p>
-            <p>Gin & Tonic</p>
-            <p>Palomas</p>
-        </div>
-        <div class="botellas" id="botellas">
-            <h2>Botellas</h2>
-            <p>Vino Tinto Finca las Moras</p>
-            <p>Vino Tinto Trapiche Malbec</p>
-            <p>Vino Tinto Pata Negra</p>
-            <p>Vino Riunite, Rossi, 4 Soles</p>
-        </div>
-    </div>
     <script src="assets/script.js"></script>
+    <!-- Menú lateral -->
+        <div class="menu">
+                <!-- <input type="checkbox" class="checkbox" id="menu-toogle">
+                    <label for="menu-toogle" class="menu-toogle"></label>  -->
+                    <!-- <a id="abrir" href="javascript:void(0)" onclick="mostrar()"> &#9776 </a>
+                        <a id="cerrar" href="javascript:void(0)" onclick="ocultar()"> &#9776 </a> -->
+                        
+                        <a id="cerrar" href="javascript:void(0)" onclick=""> &#9776 </a> 
+                        <a>Tu cabaña Bar la Calma</a>
+        </div>
+                    
+        <!-- <nav class="nav" id="mySidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times; </a>                     <a href="#">Cervezas</a> <br>
+            <a href="#">Bebidas Mixtas</a> <br>
+            <a href="#">Botellas</a> <br>
+            <a href="#">Alimentos</a> <br>
+            <a href="#">Bebidas Sin Alcohol</a> <br>
+            <a href="#">Postres</a> <br>
+        </nav>  -->
+                    
+    <main class="">
+        <div class="contenido-principal" id="conte-principal" > 
+            <div class="producto cerveza" id="cervezas">
+                <h2>CERVEZAS</h2>
+                <p>Cerveza Corona, Victoria  $75.00</p> <hr>
+                <p>Cerveza XX Lager, Ámbar $80</p> <hr>
+                <p>Cerveza Indio $70</p> <hr>
+                <p>Negra Modelo, Modelo especial $90</p> <hr>
+                <p>Bohemia obscura $40</p> <hr>
+            </div>
+
+            <div class="producto mixta" id="mixtas">
+                <h2>BEBIDAS MIXTAS</h2>
+                <p>Mezcalitos</p><hr>
+                <p>Mojitos</p><hr>
+                <p>Piña colada</p><hr>
+                <p>Margaritas</p><hr>
+                <p>Gin & Tonic</p><hr>
+                <p>Palomas</p><hr>
+            </div>
+
+            <div class="producto botella" id="botellas">
+                <h2>BOTELLAS</h2>
+                <div class="precio"></div>
+                <p>Vino Tinto Finca las Moras</p><hr>
+                <p>Vino Tinto Trapiche Malbec</p><hr>
+                <p>Vino Tinto Pata Negra</p><hr>
+                <p>Vino Riunite, Rossi, 4 Soles</p><hr>
+            </div>
+
+            <div class="producto alimentos">
+                <h2>ALIMENTOS</h2>
+                <p>Lasagna de carne &nbsp; $55.00</p><hr>
+                <p>Pizza grande <br> Peperoni, 4 quesos  $180.00</p><hr>
+                <p>Rebanada de Pizza $25.00</p><hr>
+                <p>Papas con especias al horno  $34.00</p><hr>
+                <p>Papas a la francesa $35.00</p><hr>
+                <p>Papas Gajo $35.00</p><hr>
+                <p>Hot Dog <br>(con queso, tocino y piña) $28.00</p><hr>
+                <p>Alitas $55.00</p><hr>
+                <p>Boneless $55.00</p><hr>
+                <p>Tacos bistec $20.00</p><hr>
+                <p>Taco suadero $20.00</p><hr>
+                <p>Taco arrachera $25.00</p><hr>
+            </div>
+
+            <div class="producto noAlcohol">
+                <h2>SIN ALCOHOL</h2>
+                <p>Sangria preparada $25.00</p><hr>
+                <p>Limonada $25.00</p><hr>
+                <p>Naranjada $25.00</p><hr>
+                <p>Refrescos $25.00</p><hr>
+                <p>Agua natural $10.00</p><hr>
+            </div>
+
+            <div class="producto postre">
+                <h2>POSTRES</h2>
+                <p>Brocheta <br> (Fresas con chocolate) <br> (Uva con philadelfia $15.00)</p><hr>
+                <p>Chesscake $25.00</p><hr>
+            </div>
+        </div>
+
+    </main>
+    
+
+    
     
 </body>
 </html>
